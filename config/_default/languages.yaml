@@ -9,14 +9,14 @@ en:
   contentDir: content/en
 
 # Uncomment the lines below to configure your website in a second language.
-zh:
-  locale: zh-Hans
-  contentDir: content/zh
-  title: Chinese website title...
+jp:
+  locale: jp
+  contentDir: content/jp
+  title: 
   params:
-    description: Site description in Chinese...
+    description: 
   menu:
     main:
-      - name: 传
+      - name: 
         url: '#about'
         weight: 1
