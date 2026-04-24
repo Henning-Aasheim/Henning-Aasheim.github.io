@@ -9,14 +9,14 @@ en:
   contentDir: content/en
 
 # Uncomment the lines below to configure your website in a second language.
-jp:
-  locale: jp
-  contentDir: content/jp
-  title: 
-  params:
-    description: 
-  menu:
-    main:
-      - name: 
-        url: '#about'
-        weight: 1
+#jp:
+#  locale: jp
+#  contentDir: content/jp
+#  title: 
+#  params:
+#    description: 
+#  menu:
+#    main:
+#      - name: 
+#        url: '#about'
+#        weight: 1
