@@ -5,3 +5,7 @@
 @theme {
   --font-playfair: 'Playfair Display', 'serif';
 }
+
+.article{
+  @apply flex flex-col gap-3 font-playfair tracking-wide mb-20
+}

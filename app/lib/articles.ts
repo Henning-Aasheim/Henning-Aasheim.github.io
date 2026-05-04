@@ -56,6 +56,6 @@ export async function getArticleData(id : string) {
   return {
     id,
     contentHtml,
-    ...matterResult.data,
+    ...(matterResult.data as ArticleItem),
   };
 }
