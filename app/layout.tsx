@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display, Playfair_Display_SC } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
@@ -18,6 +17,12 @@ const geistMono = Geist_Mono({
 const playfair = Playfair_Display({
   variable: '--font-playfair',
   subsets: ['latin'],
+});
+
+const playfairSC = Playfair_Display_SC({
+  variable: '--font-playfair-sc',
+  subsets: ['latin'],
+  weight: ['400', '700', '900'],
 });
 
 export const metadata: Metadata = {
