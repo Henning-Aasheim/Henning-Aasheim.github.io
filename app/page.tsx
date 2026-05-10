@@ -15,7 +15,7 @@ export default function Home() {
           <article key={article.id} className="group">
               <Link href={`/blog/${article.id}`}>
               <h2 className="text-2xl font-playfair font-semibold">{article.title}</h2>
-              <div className="font-playfair-sc text-black/70"><Date dateString={article.date} /></div>
+              <div className="font-playfair-sc text-black/70 dark:text-olive-400"><Date dateString={article.date} /></div>
             </Link>
           </article>
         ))}

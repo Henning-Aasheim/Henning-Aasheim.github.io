@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display, Playfair_Display_SC } from "next/f
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,17 +38,16 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en" 
+      suppressHydrationWarning
       className={`${playfair.variable} ${geistMono.variable} ${geistSans.variable}  h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-
+        <ThemeProvider attribute='class' enableSystem defaultTheme="system">
           <Header />
-
-        {children}
-
+            {children}
           <Footer />
-
+        </ThemeProvider>
       </body>
     </html>
   );
