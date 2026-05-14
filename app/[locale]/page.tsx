@@ -19,6 +19,9 @@ export default function Home({ params }: { params: Promise<{ locale: string, dat
     <div className="text-center pt-12">
       <h1 className="text-4xl mb-6 font-default font-bold">{t('header')}</h1>
 
+      <p className="text-lg text-left mb-12 w-4/5 md:w-1/2 xl:w-0.4 mx-auto font-default text-black/70 dark:text-olive-400">{t('description')}</p>
+
+      <h1 className="text-4xl mb-6 font-default font-bold">{t('blog')}</h1>
       <div className="grid gap-8">
         {allArticlesData.map((article) => (
           <article key={article.id} className="group">

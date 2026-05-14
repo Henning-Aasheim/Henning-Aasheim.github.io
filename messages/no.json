@@ -1,6 +1,38 @@
-{"nav": {"home": "Hjem", "about": "Om meg", "blog": "Blogg"},
- "LocaleSwitcher": {"en": "Engelsk", "ja": "Japansk", "no": "Norsk"},
- "footer": {"copyright": "© 2024 Henning Åsheim.", "description": "Dårlig utviklet med Next.js og Tailwind CSS."},
- "home": {"header": "Velkommen til min blogg"},
- "about": {"heading": "Om meg"},
- "blog": {"heading": "Blogg"}}
+{
+    "nav": 
+    {
+        "home": "Hjem", 
+        "about": "Om meg", 
+        "blog": "Blogg"
+    },
+
+    "LocaleSwitcher": 
+    {
+        "en": "Engelsk", 
+        "ja": "Japansk", 
+        "no": "Norsk"
+    },
+
+    "footer": 
+    {
+        "copyright": "© 2024 Henning Åsheim.", 
+        "description": "Dårlig utviklet med Next.js og Tailwind CSS."
+    },
+
+    "home": 
+    {
+        "header": "Velkommen til min blogg", 
+        "description": "Mitt navn er Henning Åsheim og jeg er en statsviter som for tiden arbeider som vitenskapsassistent ved Universitetet i Oslo. Til daglig jobber jeg både med forskning og undervisning, og har min styrke innenfor kvantitative metoder. Jeg er også interessert i programmering og jobber mye med å innhente, bearbeide og analysere data. I tillegg er jeg interessert i politikk og det som foregår både i det norske samfunnet og i verden for øvrig. Denne siden er en presentasjon av meg, samt inkluderer en blogg hvor jeg skriver om det som interesserer meg.",
+        "blog": "Blogg"
+    },
+
+    "about": 
+    {
+        "heading": "Om meg"
+    },
+
+ "blog": 
+    {
+        "heading": "Blogg"
+    }
+}
