@@ -12,7 +12,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
     return (
         <div className="text-center pt-12">
-            <h1 className="text-3xl font-bold mb-8 font-playfair">{t('heading')}</h1>
+            <h1 className="text-3xl font-bold mb-8 font-default">{t('heading')}</h1>
         </div>
     );
 }

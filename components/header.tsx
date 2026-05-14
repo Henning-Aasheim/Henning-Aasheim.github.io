@@ -17,7 +17,7 @@ export default function Header() {
                 <div className="flex-1" />
 
                 {/* Centered links */}
-                <div className="flex space-x-12 font-playfair justify-center text-xl">
+                <div className="flex space-x-12 font-default justify-center text-xl">
                     <Link href='/' className="text-gray-800 dark:text-gray-300 font-medium">{t('home')}</Link>
                     <Link href='/about' className="text-gray-800 dark:text-gray-300 font-medium">{t('about')}</Link>
                     <Link href='/blog' className="text-gray-800 dark:text-gray-300 font-medium">{t('blog')}</Link>
