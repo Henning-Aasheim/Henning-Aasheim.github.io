@@ -1,8 +1,8 @@
 ---
-image:
-content:
+image: '/blog/kusoda.png'
+category: 'Politics'
 title: 'Here are my thoughts on something'
-author:
+author: 'Henning Åsheim'
 date: '2026-04-30'
 ---
 

@@ -25,6 +25,7 @@ export default function BlogPage({ params }: { params: Promise<{ locale: string,
                     <article key={article.id} className="group ">
                         <div className="flex justify-center mb-5">
                             <Link href={`/blog/${article.id}`}>
+                                <img src={article.image} alt={article.title} className="rounded-lg w-full h-65 object-cover group-hover:scale-105 transition-transform duration-300" />
                                 <h2 className="text-lg sm:text-2xl font-default font-semibold text-center">{article.title}</h2>
                                 <div className="font-default text-black/70 dark:text-gray-300">{format.dateTime(dateTime, { dateStyle: 'long' })}</div>
                             </Link>

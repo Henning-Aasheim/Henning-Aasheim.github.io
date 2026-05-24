@@ -5,6 +5,9 @@ export interface ArticlePost {
 }
 
 export interface ArticleItem {
+    image: string
+    category: string
     title: string
+    author: string
     date: string
 }

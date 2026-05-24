@@ -1,5 +1,8 @@
 ---
+image: '/blog/background.jpg'
+category: 'Politics'
 title: 'Here are my thoughts on something else'
+author: 'Henning Åsheim'
 date: '2026-04-30'
 ---
 
