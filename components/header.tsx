@@ -18,9 +18,9 @@ export default function Header() {
 
                 {/* Centered links */}
                 <div className="flex mr-5 xs:mr-0 space-x-4 2xs:space-x-12 font-default justify-center text-base xs:text-xl">
-                    <Link href='/' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600">{t('home')}</Link>
-                    <Link href='/about' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600">{t('about')}</Link>
-                    <Link href='/blog' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600">{t('blog')}</Link>
+                    <Link href='/' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600 hover:scale-110">{t('home')}</Link>
+                    <Link href='/about' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600 hover:scale-110">{t('about')}</Link>
+                    <Link href='/blog' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600 hover:scale-110">{t('blog')}</Link>
                 </div>
                 
                 <div className="flex-1 flex justify-end gap-5 sm:gap-8 items-center mr-2">

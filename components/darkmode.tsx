@@ -11,7 +11,7 @@ export function DarkMode () {
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className="cursor-pointer"
             aria-label="Toggle darkmode">
-            {theme === 'dark' ? <Sun size={25} className="hover:text-indigo-600"/> : <Moon size={25} className="hover:text-indigo-600"/>}
+            {theme === 'dark' ? <Sun size={20} className="xs:size-6 hover:text-indigo-600 hover:scale-110"/> : <Moon size={20} className="xs:size-6 hover:text-indigo-600 hover:scale-110"/>}
         </button>
     )
 }
