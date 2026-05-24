@@ -25,5 +25,5 @@
 
 
 .article{
-  @apply flex flex-col gap-3 font-default tracking-wide mb-20 text-lg
+  @apply flex flex-col gap-3 font-default tracking-wide mb-20 text-base sm:text-lg
 }

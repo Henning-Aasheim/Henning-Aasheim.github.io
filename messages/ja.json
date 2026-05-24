@@ -2,7 +2,7 @@
     "nav": 
     {
         "home": "ホーム", 
-        "about": "私について", 
+        "about": "履歴", 
         "blog": "ブログ"
     },
 
@@ -28,7 +28,7 @@
 
     "about": 
     {
-        "heading": "私について",
+        "heading": "履歴",
         "description": "初めましてヘンニング・オーサイムです。ノルウェーのオスロ大学で研究助手として働いています。日々の仕事は研究と教育の両方を跨ぎ、強みは定量的方法です。また、プログラミングにも興味があり、データの収集、処理、分析にかなり時間を費やしています。さらに、政治にも関心があり、ノルウェー社会の動きや世界の出来事についても注目しています。このサイトは私の紹介ページであり、興味のあることを書くブログでもあります。",
         "profile-heading": "ﾍﾝﾆﾝｸﾞ=ｵｰｻｲﾑ",
         "work-title": "研究助手",
@@ -37,7 +37,23 @@
         "experience-heading": "経験",
         "experience-1-title": "研究助手",
         "experience-1-employer": "オスロ大学",
-        "experience-1-date": "2025年8月 - 現在"
+        "experience-1-date": "2025年8月 - 現在",
+        "experience-2-title": "インターン",
+        "experience-2-employer": "オスロ大学",
+        "experience-2-date": "2025年6月 - 2025年8月",
+        "experience-3-title": "アドバイザー",
+        "experience-3-employer": "シヴィタ",
+        "experience-3-date": "2024年3月 - 2025年2月",
+        "education-heading": "教育",
+        "education-1-title": "政治学の修士号",
+        "education-1-university": "オスロ大学",
+        "education-1-date": "2023年8月 - 2025年6月",
+        "education-2-title": "政治学の学士号",
+        "education-2-university": "オスロ大学",
+        "education-2-date": "2022年8月 - 2023年6月",
+        "education-3-title": "留学",
+        "education-3-university": "信州大学",
+        "education-3-date": "2021年10月 - 2022年8月"
     },
 
     "blog": 

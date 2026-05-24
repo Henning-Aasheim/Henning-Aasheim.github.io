@@ -37,7 +37,23 @@
         "experience-heading": "Experience",
         "experience-1-title": "Research Assistant",
         "experience-1-employer": "University of Oslo",
-        "experience-1-date": "August 2025 - Present"
+        "experience-1-date": "August 2025 - Present",
+        "experience-2-title": "Intern",
+        "experience-2-employer": "University of Oslo",
+        "experience-2-date": "June 2025 - August 2025",
+        "experience-3-title": "Consultant",
+        "experience-3-employer": "civita",
+        "experience-3-date": "March 2024 - February 2025",
+        "education-heading": "Education",
+        "education-1-title": "Master's in Political Science",
+        "education-1-university": "University of Oslo",
+        "education-1-date": "August 2023 - June 2025",
+        "education-2-title": "Bachelor's in Political Science",
+        "education-2-university": "University of Oslo",
+        "education-2-date": "August 2022 - June 2023",
+        "education-3-title": "Exchange",
+        "education-3-university": "Shinshu University",
+        "education-3-date": "October 2021 - August 2022"
     },
     
     "blog": 
