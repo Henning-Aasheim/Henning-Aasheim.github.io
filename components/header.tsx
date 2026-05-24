@@ -17,13 +17,13 @@ export default function Header() {
                 <div className="flex-1" />
 
                 {/* Centered links */}
-                <div className="flex mr-5 sm:mr-0 space-x-3 sm:space-x-12 font-default justify-center text-sm sm:text-xl">
-                    <Link href='/' className="text-gray-800 dark:text-gray-300 font-medium">{t('home')}</Link>
-                    <Link href='/about' className="text-gray-800 dark:text-gray-300 font-medium">{t('about')}</Link>
-                    <Link href='/blog' className="text-gray-800 dark:text-gray-300 font-medium">{t('blog')}</Link>
+                <div className="flex mr-5 xs:mr-0 space-x-4 2xs:space-x-12 font-default justify-center text-base xs:text-xl">
+                    <Link href='/' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600">{t('home')}</Link>
+                    <Link href='/about' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600">{t('about')}</Link>
+                    <Link href='/blog' className="text-gray-800 dark:text-gray-300 font-bold hover:text-indigo-600">{t('blog')}</Link>
                 </div>
                 
-                <div className="flex-1 flex justify-end gap-1 sm:gap-3 items-center">
+                <div className="flex-1 flex justify-end gap-5 sm:gap-8 items-center mr-2">
                     <LocaleSwitcher />
                     <DarkMode />
                 </div>

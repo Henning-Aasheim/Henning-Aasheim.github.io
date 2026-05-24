@@ -28,8 +28,8 @@ export default function LocaleSwitcher() {
 
   return (
     <div ref={dropdownRef} className="relative">
-      <button className='block focus:col-red-500' onClick={() => setIsOpen(!isOpen)}>
-        <Earth size={20} className='focus:col-red-500'/>
+      <button className='block cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
+        <Earth size={20} className='xs:size-6 hover:text-indigo-600'/>
       </button>
       {isOpen && (
         <div className='absolute right-0 bg-gray-200 dark:bg-gray-700 rounded-md py-2 w-50 mt-2 shadow-lg z-10'>

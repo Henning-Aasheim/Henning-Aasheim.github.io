@@ -9,9 +9,9 @@ export function DarkMode () {
     return (
         <button 
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-2 rounded-md"
+            className="cursor-pointer"
             aria-label="Toggle darkmode">
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            {theme === 'dark' ? <Sun size={25} className="hover:text-indigo-600"/> : <Moon size={25} className="hover:text-indigo-600"/>}
         </button>
     )
 }

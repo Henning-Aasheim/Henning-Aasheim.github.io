@@ -23,8 +23,12 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
     return (
         <div className="relative w-10/11 md:w-4/5 xl:w-2/3 mx-auto pt-12 mb-10 flex flex-col lg:flex-row">
+
+
             {/* PROFILE IMAGE */}
-            <div className="flex-none min-w-[10rem] lg:mr-10 pr-0 mb-8">
+
+
+            <div className="flex-none min-w-40 lg:mr-10 pr-0 mb-8">
                 <div className="flex justify-center items-center flex-col">
                 <img
                     src="/profile_image.jpg"
@@ -43,7 +47,11 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                 </div>
             </div>
 
+
+
             {/* Introduction and experience */}
+
+
             <div className="lg:w-2/3 mx-auto">
 
                 {/* Introduction and resume */}
@@ -55,11 +63,13 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                 {t('description')}
                 </p>
 
+                {/* Resume download button */}
+
                 <div className="flex justify-center lg:justify-start">
                     <a
                     href={cvHref}
-                    className="p-3 mb-3 font-bold bg-gray-300 hover:bg-gray-600 hover:text-white
-                                dark:bg-gray-700 dark:hover:bg-gray-400 dark:text-white dark:hover:text-black
+                    className="p-3 mb-3 font-bold bg-gray-300 hover:bg-indigo-600 hover:text-white
+                                dark:bg-gray-700 dark:hover:bg-indigo-600 dark:text-white
                                 text-lg font-default rounded-xl"
                     download
                     >

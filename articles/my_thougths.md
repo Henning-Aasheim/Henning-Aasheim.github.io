@@ -1,5 +1,8 @@
 ---
+image:
+content:
 title: 'Here are my thoughts on something'
+author:
 date: '2026-04-30'
 ---
 
