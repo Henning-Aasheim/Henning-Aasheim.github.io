@@ -24,9 +24,25 @@
 
   --breakpoint-xs: 475px;
   --breakpoint-2xs: 350px;
+
+  --color-khaki: #efeae3;
+  --color-khaki-dark: #c1bdb7;
+  --color-khaki-darker: #9a9792;
+  --color-textblue: #1a4b6e;
+  --color-purple: #402d63;
 }
 
 
 .article{
   @apply flex flex-col gap-3 font-default tracking-wide mb-20 text-base sm:text-lg
+}
+
+.dropcap {
+  @apply text-base sm:text-xl text-left font-default 
+  first-letter:float-left first-letter:text-6xl first-letter:mt-2.5 first-letter:mr-1 
+  mb-12 w-4/5 md:w-1/2 xl:w-2/5 mx-auto text-black/80 dark:text-gray-300
+}
+
+:lang(ja) .dropcap:first-letter {
+  @apply text-5xl
 }

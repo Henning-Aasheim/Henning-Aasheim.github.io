@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { FileDown } from "lucide-react";
+import Shinshu from "../../icons/shinshu.svg";
 
 
 export default function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -19,6 +20,24 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
   };
 
     const cvHref = localeToCvPath[locale] ?? localeToCvPath["no"]; // default to Norwegian
+
+    const civita = [
+        {
+            url: 'https://civita.no/notat/mikrobrikkekrigen/',
+            title: 'Mikrobrikkekrigen',
+            image: '',
+        },
+        {
+            url: 'https://civita.no/notat/det-indiske-valget-er-india-pa-vei-bort-fra-sin-demokratiske-tradisjon/',
+            title: 'Det indiske valget',
+            image: '',
+        },
+        {
+            url: 'https://civita.no/notat/har-norsk-offentlig-sektor-et-produktivitetsproblem/',
+            title: 'Norsk offentlig sektor og produktivitet',
+            image: '',
+        },
+    ];
 
 
     return (
@@ -68,8 +87,8 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                 <div className="flex justify-center lg:justify-start">
                     <a
                     href={cvHref}
-                    className="p-3 mb-3 font-bold bg-gray-300 hover:bg-indigo-600 hover:text-white
-                                dark:bg-gray-700 dark:hover:bg-indigo-600 dark:text-white
+                    className="p-3 mb-3 font-bold border-solid border-2 border-textblue bg-khaki-dark hover:text-white
+                               hover:bg-purple dark:bg-gray-700 dark:text-white
                                 text-lg font-default rounded-xl"
                     download
                     >
@@ -200,16 +219,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
-                                    <img
-                                    src="/shinshu_pos.svg"
-                                    alt="Shinshu Logo"
-                                    className="block dark:hidden w-15 h-15 absolute left-0 top-1"
-                                    />
-                                    <img
-                                    src="/shinshu_neg.svg"
-                                    alt="Shinshu Logo"
-                                    className="hidden dark:block w-15 h-15 absolute left-0 top-1"
-                                    />
+                                    <Shinshu width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('education-3-title')}</h2>
@@ -220,6 +230,12 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         </li>
                     </ol>
                 </div>
+
+                <div className="lg:mt-10">
+                    <h1 className="text-xl sm:text-3xl font-bold font-default">{t('previous-work')}</h1>
+                    
+                </div>
+
             </div>
         </div>
     );

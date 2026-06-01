@@ -63,7 +63,7 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={`${playfair.variable} ${notoSerif.variable} ${yuji.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-default">
+      <body className="min-h-full flex flex-col font-default bg-khaki dark:bg-gray-900 text-textblue dark:text-white">
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider attribute='class' enableSystem defaultTheme="system">
             <Header />
