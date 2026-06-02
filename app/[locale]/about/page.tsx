@@ -3,6 +3,8 @@ import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import { FileDown } from "lucide-react";
 import Shinshu from "../../icons/shinshu.svg";
+import Civita from "../../icons/civita.svg";
+import UiO from "../../icons/uio_segl.svg";
 
 
 export default function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -106,16 +108,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
-                                    <img
-                                    src="/uio_segl_pos.svg"
-                                    alt="University of Oslo Logo"
-                                    className="block dark:hidden w-15 h-15 absolute left-0 top-1"
-                                    />
-                                    <img
-                                    src="/uio_segl_neg.svg"
-                                    alt="University of Oslo Logo"
-                                    className="hidden dark:block w-15 h-15 absolute left-0 top-1"
-                                    />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('experience-1-title')}</h2>
@@ -127,16 +120,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
-                                    <img
-                                    src="/uio_segl_pos.svg"
-                                    alt="University of Oslo Logo"
-                                    className="block dark:hidden w-15 h-15 absolute left-0 top-1"
-                                    />
-                                    <img
-                                    src="/uio_segl_neg.svg"
-                                    alt="University of Oslo Logo"
-                                    className="hidden dark:block w-15 h-15 absolute left-0 top-1"
-                                    />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('experience-2-title')}</h2>
@@ -148,16 +132,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
-                                    <img
-                                    src="/civita_pos.svg"
-                                    alt="civita Logo"
-                                    className="block dark:hidden w-15 h-7 absolute left-0 top-1"
-                                    />
-                                    <img
-                                    src="/civita_neg.svg"
-                                    alt="civita Logo"
-                                    className="hidden dark:block w-15 h-7 absolute left-0 top-1"
-                                    />
+                                    <Civita width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('experience-3-title')}</h2>
@@ -177,16 +152,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
-                                    <img
-                                    src="/uio_segl_pos.svg"
-                                    alt="University of Oslo Logo"
-                                    className="block dark:hidden w-15 h-15 absolute left-0 top-1"
-                                    />
-                                    <img
-                                    src="/uio_segl_neg.svg"
-                                    alt="University of Oslo Logo"
-                                    className="hidden dark:block w-15 h-15 absolute left-0 top-1"
-                                    />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('education-1-title')}</h2>
@@ -198,16 +164,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
-                                    <img
-                                    src="/uio_segl_pos.svg"
-                                    alt="University of Oslo Logo"
-                                    className="block dark:hidden w-15 h-15 absolute left-0 top-1"
-                                    />
-                                    <img
-                                    src="/uio_segl_neg.svg"
-                                    alt="University of Oslo Logo"
-                                    className="hidden dark:block w-15 h-15 absolute left-0 top-1"
-                                    />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('education-2-title')}</h2>
