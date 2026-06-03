@@ -19,6 +19,11 @@
         "description": "Next.jsとTailwind CSSで雑に開発されました。"
     },
 
+    "layout":
+    {
+        "warning": "このサイトはめっちゃ開発中です。"
+    },
+
     "home": 
     {
         "header1": "ヘンニング",

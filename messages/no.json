@@ -19,6 +19,11 @@
         "description": "Dårlig utviklet med Next.js og Tailwind CSS."
     },
 
+    "layout":
+    {
+        "warning": "Denne siden er veldig under utvikling"
+    },
+
     "home": 
     {
         "header1": "Henning",

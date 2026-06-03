@@ -19,6 +19,11 @@
         "no": "Norwegian"
     },
 
+    "layout":
+    {
+        "warning": "This site is very much a a work in progress"
+    },
+
     "home": 
     {
         "header1": "Henning",

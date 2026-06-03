@@ -8,6 +8,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
+import { useTranslations } from "next-intl";
 
 const playfair = Playfair_Display({
   variable: '--font-playfair',
@@ -49,6 +50,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const {locale} = await params;
+  const t = useTranslations('layout');
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -66,6 +68,9 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col font-default bg-khaki dark:bg-gray-900 text-textblue dark:text-white">
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider attribute='class' enableSystem defaultTheme="system">
+            <div className='bg-yellow-400 border-b-2 border-black'>
+              <h1 className='font-bold py-4 mx-auto'>{t('warning')}</h1>
+            </div>
             <Header />
               {children}
             <Footer />
