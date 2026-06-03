@@ -19,7 +19,7 @@
         "description": "Next.jsとTailwind CSSで雑に開発されました。"
     },
 
-    "layout":
+    "warning":
     {
         "warning": "このサイトはめっちゃ開発中です。"
     },

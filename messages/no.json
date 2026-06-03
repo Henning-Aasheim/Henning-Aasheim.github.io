@@ -19,7 +19,7 @@
         "description": "Dårlig utviklet med Next.js og Tailwind CSS."
     },
 
-    "layout":
+    "warning":
     {
         "warning": "Denne siden er veldig under utvikling"
     },
