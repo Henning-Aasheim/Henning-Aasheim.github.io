@@ -8,7 +8,7 @@ import UiO from "../../icons/uio_segl.svg";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.flatMap((locale) => ({ locale }));
 }
 
 export default function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
