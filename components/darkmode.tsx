@@ -4,11 +4,11 @@ import { useTheme } from "next-themes"
 import { Sun, Moon } from "lucide-react"
 
 export function DarkMode () {
-    const {theme, setTheme} = useTheme()
+    const {theme, setTheme, resolvedTheme} = useTheme()
 
     return (
         <button 
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
             className="cursor-pointer"
             aria-label="Toggle darkmode">
             {theme === 'dark' ? <Sun size={20} className="xs:size-6  hover:scale-110"/> : <Moon size={20} className="xs:size-6 hover:scale-110"/>}

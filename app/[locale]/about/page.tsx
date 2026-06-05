@@ -285,7 +285,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         {civita.map((item) => (
                             <article key={item.id} className="group">
                                 <a href={item.url}>
-                                    <div className="flex flex-row flex-wrap border-solid border-2 rounded-xl mb-4 items-center">
+                                    <div className="flex flex-row flex-wrap border-solid border-2 rounded-xl mb-4 items-center hover:scale-102 hover:transition-transform transition-duration-100">
                                         <img src={item.image} alt={item.title} className="w-24 h-16 object-cover rounded-lg mr-4" />
                                         <h2 className="font-bold text-base sm:text-xl md:text-2xl flex-1">{item.title}</h2>
                                     </div>
