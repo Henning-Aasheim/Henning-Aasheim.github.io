@@ -29,9 +29,9 @@ export default function Home({ params }: { params: Promise<{ locale: string, dat
         {allArticlesData.map((article) => (
           <article key={article.id} className="group max-w-lg mx-auto">
               <Link href={`/blog/${article.id}`}>
-              <h2 className="text-lg sm:text-2xl mb-2 mx-2 sm:mx-0 font-default font-semibold 
+                <h2 className="text-lg sm:text-2xl mb-2 mx-2 sm:mx-0 font-default font-semibold 
                              group-hover:scale-110 group-hover:transition-transform transition-duration-100">{article.title}</h2>
-              <div className="font-default text-black/70 dark:text-gray-300 
+                <div className="font-default text-black/70 dark:text-gray-300 
                               group-hover:scale-110 group-hover:transition-transform transition-duration-100">{format.dateTime(dateTime, { dateStyle: 'long' })}</div>
             </Link>
           </article>

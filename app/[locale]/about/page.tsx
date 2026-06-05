@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { use } from "react";
-import { FileDown } from "lucide-react";
+import { FileDown, Link } from "lucide-react";
 import { Metadata } from "next";
 import Shinshu from "../../icons/shinshu.svg";
 import Civita from "../../icons/civita.svg";
@@ -46,19 +46,28 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
     const civita = [
         {
+            id: 1,
             url: 'https://civita.no/notat/mikrobrikkekrigen/',
             title: 'Mikrobrikkekrigen',
-            image: '',
+            image: '/civita/mikrobrikker.webp',
         },
         {
+            id: 2,
             url: 'https://civita.no/notat/det-indiske-valget-er-india-pa-vei-bort-fra-sin-demokratiske-tradisjon/',
             title: 'Det indiske valget',
-            image: '',
+            image: '/civita/india.webp',
         },
         {
+            id: 3,
+            url: 'https://civita.no/podcast/digitale-utfordringer-del-3-kampen-om-mikrochipene/',
+            title: 'Kampen om mikrochipene',
+            image: '/civita/podkast.webp',
+        },
+        {
+            id: 4,
             url: 'https://civita.no/notat/har-norsk-offentlig-sektor-et-produktivitetsproblem/',
             title: 'Norsk offentlig sektor og produktivitet',
-            image: '',
+            image: '/civita/offentlig_sektor.webp',
         },
     ];
 
@@ -250,10 +259,23 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
 
     {/* Previous work */}
-    
+
 
                 <div className="lg:mt-10">
-                    <h1 className="text-xl sm:text-3xl font-bold font-default">{t('previous-work')}</h1>
+                    <h1 className="text-xl sm:text-3xl font-bold font-default mb-6">{t('previous-work')}</h1>
+
+                    <div className=''>
+                        {civita.map((item) => (
+                            <article key={item.id} className="group">
+                                <a href={item.url}>
+                                    <div className='mb-4 border-solid border-2 rounded-xl hover:bg-khaki-dark'>
+                                    <img src={item.image} alt={item.title} className="inline-block w-35 h-20 object-cover rounded-lg" />
+                                    <h2 className='text-2xl font-bold inline-block ml-8'>{item.title}</h2>
+                                    </div>
+                                </a>
+                            </article>
+                        ))}
+                    </div>
                     
                 </div>
 
