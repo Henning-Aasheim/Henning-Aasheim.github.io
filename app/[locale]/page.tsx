@@ -9,6 +9,7 @@ export default function Home({ params }: { params: Promise<{ locale: string, dat
  
   // Enable static rendering
   setRequestLocale(locale);
+  
   const t = useTranslations('home');
   const allArticlesData = getSortedArticles();
 

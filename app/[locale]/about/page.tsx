@@ -7,6 +7,8 @@ import Shinshu from "../../icons/shinshu.svg";
 import Civita from "../../icons/civita.svg";
 import UiO from "../../icons/uio_segl.svg";
 
+// This is the metadata for the page
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata>{
   const {locale} = await params;
 
@@ -15,11 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations('metaAbout');
 
   return {
-    title: t("title"), // e.g. "My site – English", "Meine Seite – Deutsch"
+    title: t("title"),
     description: t("description"),
-    // etc.
   };
 }
+
+// This is the main page component
 
 export default function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
     const {locale} = use(params);
@@ -36,6 +39,10 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
   };
 
     const cvHref = localeToCvPath[locale] ?? localeToCvPath["no"]; // default to Norwegian
+
+
+    // This is the links to the civita work
+
 
     const civita = [
         {
@@ -60,7 +67,7 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
         <div className="relative w-10/11 md:w-4/5 xl:w-2/3 mx-auto pt-12 mb-10 flex flex-col lg:flex-row">
 
 
-            {/* PROFILE IMAGE */}
+    {/* PROFILE IMAGE */}
 
 
             <div className="flex-none min-w-40 lg:mr-10 pr-0 mb-8">
@@ -83,13 +90,13 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
             </div>
 
 
-
-            {/* Introduction and experience */}
+    {/* Introduction and experience */}
 
 
             <div className="lg:w-2/3 mx-auto">
 
-                {/* Introduction and resume */}
+    {/* Introduction and resume */}
+
                 <h1 className="text-xl sm:text-3xl font-bold font-default">
                 {t('heading')}
                 </h1>
@@ -98,7 +105,9 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                 {t('description')}
                 </p>
 
-                {/* Resume download button */}
+
+    {/* Resume download button */}
+
 
                 <div className="flex justify-center lg:justify-start">
                     <a
@@ -113,12 +122,20 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                     </a>
                 </div>
 
-                {/* Experience */}
+
+    {/* Experience */}
+
+
                 <div className="mt-8 lg:mt-10">
                     <h1 className="text-xl sm:text-3xl font-bold font-default">
                         {t('experience-heading')}
                     </h1>
                     <ol className="list-disc list-inside mb-10 mt-8">
+
+
+    {/* Current experience */}
+
+
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
@@ -131,6 +148,11 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                                 </div>
                             </div>
                         </li>
+
+    
+    {/* 2nd experience */}
+
+
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
@@ -143,6 +165,11 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                                 </div>
                             </div>
                         </li>
+
+
+    {/* 3rd experience */}
+
+
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
@@ -158,11 +185,20 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                     </ol>
                 </div>
 
+
+    {/* Education */}
+
+
                 <div className="mt-8 lg:mt-10">
                     <h1 className="text-xl sm:text-3xl font-bold font-default">
                         {t('education-heading')}
                     </h1>
                     <ol className="list-disc list-inside mb-10 mt-8">
+
+
+    {/* Master's degree */}
+
+
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
@@ -175,6 +211,11 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                                 </div>
                             </div>
                         </li>
+
+
+    {/* Bachelor's degree */}
+
+
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
@@ -187,6 +228,11 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                                 </div>
                             </div>
                         </li>
+    
+
+    {/* Exchange */}
+
+
                         <li className="mb-2 list-none flex items-center">
                             <div className="relative">
                                 <span>
@@ -201,6 +247,10 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                         </li>
                     </ol>
                 </div>
+
+
+    {/* Previous work */}
+    
 
                 <div className="lg:mt-10">
                     <h1 className="text-xl sm:text-3xl font-bold font-default">{t('previous-work')}</h1>

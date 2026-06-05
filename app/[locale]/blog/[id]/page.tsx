@@ -1,6 +1,9 @@
 import { getArticleData, getAllArticleIds } from "@/app/lib/articles";
 import { routing } from "@/i18n/routing";
 import { getFormatter, setRequestLocale} from 'next-intl/server';
+import { Metadata } from "next";
+
+// This generates the static paths to the articles based on locale and article id
 
 export async function generateStaticParams() {
   const locales = await routing.locales
@@ -13,6 +16,20 @@ export async function generateStaticParams() {
   }))
  )
 }
+
+// This generates metadata by using the title and category for each article
+
+export async function generateMetadata(props: { params: Promise<{id: string}> }): Promise<Metadata>{
+  const params = await props.params
+  const articleContent = await getArticleData(params.id)
+
+  return {
+    title: articleContent.title, 
+    description: articleContent.category,
+  };
+}
+
+// This is the main page component
 
 export default async function Article(props: { params: Promise<{id: string, locale: string, date: string}> }) {
     const params = await props.params

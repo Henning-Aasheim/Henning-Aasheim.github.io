@@ -5,6 +5,8 @@ import Link from "next/link";
 import { use } from "react";
 import { Metadata } from "next";
 
+// This is the metadata for the page
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata>{
   const {locale} = await params;
 
@@ -13,11 +15,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations('metaBlog');
 
   return {
-    title: t("title"), // e.g. "My site – English", "Meine Seite – Deutsch"
+    title: t("title"),
     description: t("description"),
-    // etc.
   };
 }
+
+// This is the main page component 
 
 export default function BlogPage({ params }: { params: Promise<{ locale: string, date: string }> }) {
     const {locale} = use(params);

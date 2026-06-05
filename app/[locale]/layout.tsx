@@ -10,6 +10,8 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import Warning from "@/components/warning";
 
+// Fonts
+
 const playfair = Playfair_Display({
   variable: '--font-playfair',
   subsets: ['latin'],
@@ -32,6 +34,7 @@ const yuji = Yuji_Syuku({
   weight: '400',
 });
 
+// Metadata for the main page
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata>{
   const {locale} = await params;
@@ -41,16 +44,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations('meta');
 
   return {
-    title: t("title"), // e.g. "My site – English", "Meine Seite – Deutsch"
+    title: t("title"),
     description: t("description"),
-    // etc.
   };
 }
+
+// This generates the static paths for the locales
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
 }
 
+// This is the root Layout component
 
 export default async function RootLayout({
   children,
@@ -77,7 +82,7 @@ export default async function RootLayout({
       <body className="min-h-full flex flex-col font-default bg-khaki dark:bg-gray-900 text-textblue dark:text-white">
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider attribute='class' enableSystem defaultTheme="system">
-            <Warning />
+            <Warning /> {/* Temporary warning component */}
             <Header />
               {children}
             <Footer />
