@@ -1,11 +1,15 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { use } from "react";
-import { FileDown, Link } from "lucide-react";
+import { FileDown} from "lucide-react";
 import { Metadata } from "next";
+import { FaBluesky, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 import Shinshu from "../../icons/shinshu.svg";
 import Civita from "../../icons/civita.svg";
 import UiO from "../../icons/uio_segl.svg";
+
+
 
 // This is the metadata for the page
 
@@ -96,6 +100,17 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                 <h2 className="text-base sm:text-1xl font-default mt-1">
                     {t('employer')}
                 </h2>
+                
+                <div className="mt-4">
+                    <ul className="flex-row">
+                        <li className="inline mx-2"><a href='https://bsky.app/profile/henningaasheim.bsky.social'><FaBluesky className="inline w-6 h-6"/></a></li>
+                        <li className="inline mx-2"><a href='https://github.com/Henning-Aasheim'><FaGithub className="inline w-6 h-6"/></a></li>
+                        <li className="inline mx-2"><a href='https://www.linkedin.com/in/henning-%C3%A5sheim-8114232a2/'><FaLinkedin className="inline w-6 h-6"/></a></li>
+                        <li className="inline mx-2"><a href='mailto:henning.aasheim@outlook.com'><IoMdMail className="inline w-7 h-7"/></a></li>
+                    </ul>
+                </div>
+                    
+
                 </div>
             </div>
 
