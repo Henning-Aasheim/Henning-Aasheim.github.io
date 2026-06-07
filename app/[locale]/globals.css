@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:wght@400..900&family=Yuji+Syuku&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
 
 
 @import "tailwindcss";
@@ -21,6 +22,7 @@
   --font-playfair: 'Playfair Display', 'serif';
   --font-yuji: 'Yuji Syuku', 'serif';
   --font-playfair-sc: 'Playfair Display SC', 'serif';
+  --font-quint: 'Quintessential', 'serif';
 
   --breakpoint-s: 576px;
   --breakpoint-xs: 475px;
@@ -41,10 +43,18 @@
 
 .dropcap {
   @apply text-base sm:text-xl text-left font-default 
-  first-letter:float-left first-letter:text-6xl first-letter:mt-2.5 first-letter:mr-1 
+  first-letter:float-left first-letter:text-6xl first-letter:mt-1 first-letter:mr-1 first-letter:font-quint first-letter:text-textblue
   mb-12 w-4/5 md:w-1/2 xl:w-2/5 mx-auto text-black/80 dark:text-gray-300
 }
 
 :lang(ja) .dropcap:first-letter {
-  @apply text-5xl
+  @apply text-5xl font-default mt-2.5
+}
+
+.nameLogo {
+  @apply text-6xl sm:text-[130px] mb-6 font-quint font-bold inline-block
+}
+
+:lang(ja) .nameLogo {
+  @apply font-default
 }

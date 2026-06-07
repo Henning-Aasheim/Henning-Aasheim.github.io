@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Playfair_Display_SC, Yuji_Syuku, Noto_Serif } from "next/font/google";
+import { Playfair_Display, Playfair_Display_SC, Yuji_Syuku, Noto_Serif, Quintessential } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -33,6 +33,11 @@ const yuji = Yuji_Syuku({
   variable: '--font-yuji',
   weight: '400',
 });
+
+const quint = Quintessential({
+  variable: '--font-quint',
+  weight: '400',
+})
 
 // Metadata for the main page
 
@@ -77,7 +82,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${playfair.variable} ${notoSerif.variable} ${yuji.variable} h-full antialiased`}
+      className={`${playfair.variable} ${notoSerif.variable} ${yuji.variable} ${quint.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-default bg-khaki dark:bg-gray-900 text-textblue dark:text-white">
         <NextIntlClientProvider locale={locale}>

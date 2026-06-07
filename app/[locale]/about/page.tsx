@@ -103,10 +103,10 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                 
                 <div className="mt-4">
                     <ul className="flex-row">
-                        <li className="inline mx-2"><a href='https://bsky.app/profile/henningaasheim.bsky.social'><FaBluesky className="inline w-6 h-6"/></a></li>
-                        <li className="inline mx-2"><a href='https://github.com/Henning-Aasheim'><FaGithub className="inline w-6 h-6"/></a></li>
-                        <li className="inline mx-2"><a href='https://www.linkedin.com/in/henning-%C3%A5sheim-8114232a2/'><FaLinkedin className="inline w-6 h-6"/></a></li>
-                        <li className="inline mx-2"><a href='mailto:henning.aasheim@outlook.com'><IoMdMail className="inline w-7 h-7"/></a></li>
+                        <li className="inline mx-2"><a href='https://bsky.app/profile/henningaasheim.bsky.social'><FaBluesky className="inline w-6 h-6 hover:text-orange"/></a></li>
+                        <li className="inline mx-2"><a href='https://github.com/Henning-Aasheim'><FaGithub className="inline w-6 h-6 hover:text-orange"/></a></li>
+                        <li className="inline mx-2"><a href='https://www.linkedin.com/in/henning-%C3%A5sheim-8114232a2/'><FaLinkedin className="inline w-6 h-6 hover:text-orange"/></a></li>
+                        <li className="inline mx-2"><a href='mailto:henning.aasheim@outlook.com'><IoMdMail className="inline w-7 h-7 hover:text-orange"/></a></li>
                     </ul>
                 </div>
                     
@@ -162,9 +162,9 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
 
                         <li className="mb-2 list-none flex items-center">
-                            <div className="relative">
+                            <div className="relative group hover:text-orange">
                                 <span>
-                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white group-hover:fill-orange" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('experience-1-title')}</h2>
@@ -179,9 +179,9 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
 
                         <li className="mb-2 list-none flex items-center">
-                            <div className="relative">
+                            <div className="relative group hover:text-orange">
                                 <span>
-                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white group-hover:fill-orange" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('experience-2-title')}</h2>
@@ -196,9 +196,9 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
 
                         <li className="mb-2 list-none flex items-center">
-                            <div className="relative">
+                            <div className="relative group hover:text-orange">
                                 <span>
-                                    <Civita width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
+                                    <Civita width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white group-hover:fill-orange" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('experience-3-title')}</h2>
@@ -225,9 +225,9 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
 
                         <li className="mb-2 list-none flex items-center">
-                            <div className="relative">
+                            <div className="relative group hover:text-orange">
                                 <span>
-                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white group-hover:fill-orange" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('education-1-title')}</h2>
@@ -242,9 +242,9 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
 
                         <li className="mb-2 list-none flex items-center">
-                            <div className="relative">
+                            <div className="relative group hover:text-orange">
                                 <span>
-                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white group-hover:fill-orange" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('education-2-title')}</h2>
@@ -259,9 +259,9 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
 
                         <li className="mb-2 list-none flex items-center">
-                            <div className="relative">
+                            <div className="relative group hover:text-orange">
                                 <span>
-                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
+                                    <UiO width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white group-hover:fill-orange" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('education-3-title')}</h2>
@@ -276,9 +276,9 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
 
 
                         <li className="mb-2 list-none flex items-center">
-                            <div className="relative">
+                            <div className="relative group hover:text-orange">
                                 <span>
-                                    <Shinshu width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white" />
+                                    <Shinshu width={60} height={60} className="block absolute left-0 top-1 fill-textblue dark:fill-white group-hover:fill-orange" />
                                 </span>
                                 <div className="flex flex-col ml-8 pl-15">
                                     <h2 className="text-lg sm:text-2xl font-default font-bold">{t('education-4-title')}</h2>
@@ -300,15 +300,24 @@ export default function AboutPage({ params }: { params: Promise<{ locale: string
                     <div className=''>
                         {civita.map((item) => (
                             <article key={item.id} className="group">
-                                <a href={item.url}>
-                                    <div className="flex flex-row flex-wrap rounded-xl mb-4 items-center
-                                                    hover:border-solid hover:border hover:bg-khaki-dark hover:border-gray-300 
-                                                    hover:scale-102 hover:transition-transform transition-colors duration-500 ease-in-out
-                                                    hover:shadow-xl">
-                                        <img src={item.image} alt={item.title} className="w-28 h-16 object-cover rounded-lg mr-4" />
-                                        <h2 className="font-bold text-base sm:text-xl md:text-2xl flex-1">{item.title}</h2>
-                                    </div>
-                                </a>
+                                <div className="xs:w-4/5 sm:w-full mx-auto max-w-[300px] sm:max-w-none">
+                                    <a href={item.url}>
+                                        <div className="flex flex-row flex-wrap rounded-xl mb-4 items-center overflow-hidden 
+                                                      bg-khaki shadow-lg dark:bg-gray-950
+                                                        hover:border-solid hover:border hover:border-orange 
+                                                        hover:scale-102 hover:transition-transform transition-colors duration-500 ease-in-out
+                                                        hover:shadow-xl hover:text-orange">
+                                                <img src={item.image} 
+                                                    alt={item.title} 
+                                                    className="w-full sm:h-full h-38 sm:w-45 object-cover sm:mr-4" />
+                                                <h2 className="font-bold text-base 2xs:text-xl md:text-2xl flex-1
+                                                            items-center sm:items-baseline 
+                                                            my-4 sm:my-0
+                                                            mx-3 sm:mx-0">{item.title}</h2>
+                                        </div>
+                                    </a>
+
+                                </div>
                             </article>
                         ))}
                     </div>

@@ -18,9 +18,14 @@ export default function Home({ params }: { params: Promise<{ locale: string, dat
 
   return (
     <div className="text-center pt-12">
-      <img src='/profile_image.jpg' alt="Profile Image" className="w-48 h-48 object-cover rounded-full mx-auto mb-6" />
 
-      <h1 className="text-6xl sm:text-[130px] mb-6 font-default font-bold w-4/5 xl:w-0.4 mx-auto">{t('header1')} <span className="italic">{t('header2')}</span></h1>
+      <div className="flex w-4/5 mx-auto">
+        <div className="mx-auto">
+          <h1 className="nameLogo">{t('header1')}</h1>
+          <img src='/profile_image.jpg' alt="Profile Image" className="w-48 h-48 object-cover rounded-full mb-6 inline-block mx-10" />
+          <h1 className="nameLogo">{t('header2')}</h1>
+        </div>
+      </div>
 
       <p className="dropcap">{t('description')}</p>
 
