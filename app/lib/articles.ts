@@ -5,7 +5,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 import { ArticleItem } from '@/types'
 
-const articlesDirectory = path.join(process.cwd(), 'articles')
+const articlesDirectory = path.join(process.cwd(), 'content', 'articles')
 
 export function getSortedArticles() {
   const fileNames = fs.readdirSync(articlesDirectory)
