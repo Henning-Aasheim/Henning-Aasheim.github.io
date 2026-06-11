@@ -122,6 +122,13 @@
     "library":
     {
         "title": "Library",
-        "description": "Here are the books I have read and like and I am proud of having read:)"
+        "description": "Here are the books I have read and like and I am proud of having read:)",
+        "books": "Books"
+    },
+
+    "books":
+    {
+        "author": "Author",
+        "translator": "Translator"
     }
 }

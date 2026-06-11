@@ -17,7 +17,7 @@ export type BookMeta = {
     id: string
     title: string
     author: string
-    translator?: string
+    translator?: string[]
     image: string
 }
 

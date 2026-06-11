@@ -1,6 +1,6 @@
 import { getAllBooks, getBookById } from '@/app/lib/books';
 import { routing } from '@/i18n/routing';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -52,25 +52,23 @@ export default async function BookPage(
 
   // required by next-intl
   setRequestLocale(locale);
+  const t = await getTranslations('books');
 
   const book = getBookById(locale, id);     // <-- (locale, id)
 
   return (
     <main>
-      <article>
+      <article className='max-w-100 mx-auto mt-6 px-4 sx:p-0'>
         <header>
-          <Image
-            src={book.image}
-            alt={book.title}
-            width={200}
-            height={300}
-          />
-          <h1>{book.title}</h1>
-          <p>Author: {book.author}</p>
-          {book.translator && <p>Translator: {book.translator}</p>}
+          <Image src={book.image} alt={book.title} width={400} height={600} className='mx-auto mb-4'/>
+          <h1 className='text-2xl text-center mb-4'>{book.title}</h1>
+          <div className='text-gray-600'>
+            <p className=''>{t('author')}: {book.author}</p>
+            {book.translator && <p>{t('translator')}: {new Intl.ListFormat(locale, {style: 'long', type: 'conjunction'}).format(book.translator)}</p>}
+          </div>
         </header>
 
-        <section style={{ marginTop: '2rem' }}>
+        <section className='mt-8'>
           <MDXRemote
             source={book.content}
             options={{

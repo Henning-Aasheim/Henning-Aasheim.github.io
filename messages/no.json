@@ -121,6 +121,13 @@
     "library":
     {
         "title": "Bibliotek",
-        "description": "Her er bøkene jeg har lest og liker og er stolt av å ha lest:)"
+        "description": "Her er bøkene jeg har lest og liker og er stolt av å ha lest:)",
+        "books": "Bøker"
+    },
+
+    "books":
+    {
+        "author": "Forfatter",
+        "translator": "Oversetter"
     }
 }

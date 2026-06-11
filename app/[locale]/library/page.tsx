@@ -39,14 +39,17 @@ export default function Library({ params }: { params: Promise<{ locale: string, 
 
         <p className="dropcap">{t('description')}</p>
 
-        <ul>
+        <h2 className="text-6xl">{t('books')}:</h2>
+
+        <div className="w-10/11 md:w-4/5 mx-auto">
+          <ul className="grid grid-cols-5 gap-6 ">
           {books.map((book) => (
-            <li key={book.id} className="flex gap-1 mb-2">
-              <div className="min-w-30">
+            <li key={book.id} className="inline-block mb-2">
+              <div className="min-w-30 mx-auto">
                 <Link href={`/${locale}/library/${book.id}`}>
-                  <Image src={book.image} alt={book.title} width={120} height={180} />
+                  <Image src={book.image} alt={book.title} width={180} height={270} className="mx-auto"/>
                   <div>
-                    <h2>{book.title}</h2>
+                    <h2 className="text-xl">{book.title}</h2>
                     <p>{book.author}</p>
                   </div>
                 </Link>
@@ -54,6 +57,7 @@ export default function Library({ params }: { params: Promise<{ locale: string, 
             </li>
           ))}
         </ul>
+        </div>
 
     </div>  
   )

@@ -121,7 +121,14 @@
     "library":
     {
         "title": "図書館",
-        "description": "ここは好きで、自慢で読んだと言える本:)"
+        "description": "ここは好きで、自慢で読んだと言える本:)",
+        "books": "本棚"
+    },
+
+    "books":
+    {
+        "author": "作家",
+        "translator": "翻訳家"
     }
 }
 
