@@ -42,7 +42,7 @@ export default function Library({ params }: { params: Promise<{ locale: string, 
         <h2 className="text-6xl">{t('books')}:</h2>
 
         <div className="w-10/11 md:w-4/5 mx-auto">
-          <ul className="grid grid-cols-5 gap-6 ">
+          <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 ">
           {books.map((book) => (
             <li key={book.id} className="inline-block mb-2">
               <div className="min-w-30 mx-auto">
