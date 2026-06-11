@@ -129,5 +129,18 @@
     {
         "author": "Forfatter",
         "translator": "Oversetter"
+    },
+
+    "Date": 
+    {
+        "era": 
+        {
+            "BCE": "f.Kr.",
+            "CE": "e.Kr."
+        },
+        "approx": "ca.",
+        "year": "{approx} {value} {era}",
+        "yearApprox": "{approx} {value} {era}",
+        "yearRange": "{start}–{end}"
     }
 }

@@ -130,5 +130,18 @@
     {
         "author": "Author",
         "translator": "Translator"
+    },
+
+    "Date": 
+    {
+        "era": 
+        {
+            "BCE": "BCE",
+            "CE": "CE"
+        },
+        "approx": "ca.",
+        "year": "{value} {era}",
+        "yearApprox": "{approx} {value} {era}",
+        "yearRange": "{start} – {end}"
     }
 }

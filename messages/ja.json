@@ -129,6 +129,19 @@
     {
         "author": "作家",
         "translator": "翻訳家"
+    },
+
+    "Date": 
+    {
+        "era": 
+        {
+            "BCE": "紀元前",
+            "CE": "西暦"
+        },
+    "approx": "紀元前",
+    "year": "{era}{value}年",
+    "yearApprox": "{era}{value}年ごろ",
+    "yearRange": "{start}〜{end}"
     }
 }
 

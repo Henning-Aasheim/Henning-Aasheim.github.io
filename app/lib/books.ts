@@ -1,9 +1,13 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { BookMeta, Book } from '@/types'
+import { BookMeta, Book, YearValue, YearRange } from '@/types'
+
+// --- Main path to the mdx files ---
 
 const bookDirectory = path.join(process.cwd(), 'content', 'books')
+
+// --- Reading the content of the mdx files ---
 
 export function getBookById(locale: string, id: string): Book {
   const fullPath = path.join(bookDirectory, locale, `${id}.mdx`);
@@ -15,12 +19,17 @@ export function getBookById(locale: string, id: string): Book {
     id,
     title: data.title,
     author: data.author,
+    date: data.date,
     translator: data.translator || undefined,
     image: data.image,
+    year: data.year as YearValue | undefined,
+    yearRange: data.yearRange as YearRange | undefined,
   };
 
   return { ...meta, content };
 }
+
+// --- Gets the book ids ---
 
 export function getAllBookIds() {
   const fileNames = fs.readdirSync(bookDirectory)
@@ -34,6 +43,7 @@ export function getAllBookIds() {
   })
 }
 
+
 export function getBookIds(locale: string): string[] {
   const localeDir = path.join(bookDirectory, locale);
   if (!fs.existsSync(localeDir)) return [];
@@ -44,7 +54,29 @@ export function getBookIds(locale: string): string[] {
     .map((file) => file.replace(/\.mdx$/, ''));
 }
 
+
+
 export function getAllBooks(locale: string): Book[] {
   const id = getBookIds(locale);
   return id.map((id) => getBookById(locale, id));
+}
+
+// --- Sorting the books by date ---
+
+function yearToSortable(y: YearValue): number {
+  return y.era === 'BCE' ? -y.value : y.value;
+}
+
+function getBookSortKey(book: BookMeta): number {
+  if (book.year) {
+    return yearToSortable(book.year);
+  }
+  if (book.yearRange) {
+    return yearToSortable(book.yearRange.start);
+  }
+  return Number.POSITIVE_INFINITY; // undated → pushed to end
+}
+
+export function sortBooksByDate<T extends BookMeta>(books: T[]): T[] {
+  return [...books].sort((a, b) => getBookSortKey(a) - getBookSortKey(b));
 }
