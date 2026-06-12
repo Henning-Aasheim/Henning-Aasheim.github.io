@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import { formatBookYear } from '@/app/lib/yearFormat';
 
 export const dynamic = 'error';
 
@@ -53,8 +54,14 @@ export default async function BookPage(
   // required by next-intl
   setRequestLocale(locale);
   const t = await getTranslations('books');
+  const tDate = await getTranslations('Date'); 
 
   const book = getBookById(locale, id);     // <-- (locale, id)
+
+  const yearLabel = formatBookYear(tDate, {
+    year: book.year,
+    yearRange: book.yearRange,
+  });
 
   return (
     <main>
@@ -62,13 +69,14 @@ export default async function BookPage(
         <header>
           <Image src={book.image} alt={book.title} width={400} height={600} className='mx-auto mb-4'/>
           <h1 className='text-2xl text-center mb-4'>{book.title}</h1>
-          <div className='text-gray-600'>
+          <div className='text-gray-600 dark:text-gray-400'>
             <p className=''>{t('author')}: {book.author}</p>
+            {yearLabel && <p className=''>{yearLabel}</p>}
             {book.translator && <p>{t('translator')}: {new Intl.ListFormat(locale, {style: 'long', type: 'conjunction'}).format(book.translator)}</p>}
           </div>
         </header>
 
-        <section className='mt-8'>
+        <section className='my-8'>
           <MDXRemote
             source={book.content}
             options={{

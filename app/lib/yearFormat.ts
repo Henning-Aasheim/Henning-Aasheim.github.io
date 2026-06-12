@@ -8,11 +8,14 @@ export function formatYear(
   year: YearValue,
   options?: { approx?: boolean }
 ): string {
-  const eraLabel = tDate(`era.${year.era}`); // "BCE", "紀元前", etc.
+  const eraLabel = tDate(`era.${year.era}`);
   const valueStr = year.value.toString();
-  const approx = options?.approx ?? false;
 
-  // Allow locales to define a special pattern for approx if they want
+  // Approx if:
+  // - options says so, OR
+  // - the YearValue itself has approx: true
+  const approx = options?.approx ?? !!year.approx;
+
   const key = approx ? 'yearApprox' : 'year';
 
   return tDate(key, {
@@ -26,7 +29,10 @@ export function formatYearRange(
   tDate: DateTranslator,
   range: YearRange
 ): string {
-  const approx = range.approx ?? false;
+  // Range is approx if:
+  // - range.approx is true, OR
+  // - start.approx is true
+  const approx = !!(range.approx || range.start.approx);
 
   const startStr = formatYear(tDate, range.start, { approx });
   const endStr = formatYear(tDate, range.end, { approx: false });

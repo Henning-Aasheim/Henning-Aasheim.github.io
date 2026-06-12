@@ -18,6 +18,7 @@ export type Era = 'BCE'|'CE'
 export type YearValue = {
   value: number; // 1, 2, 3, ... always positive
   era: Era;
+  approx?: boolean;
 };
 
 export type YearRange = {

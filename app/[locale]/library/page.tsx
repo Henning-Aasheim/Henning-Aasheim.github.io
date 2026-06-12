@@ -47,7 +47,7 @@ export default function Library(
       <h2 className="text-6xl">{t('books')}:</h2>
 
       <div className="w-10/11 md:w-4/5 mx-auto my-12">
-        <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <ul className="grid grid-cols-1 s:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 items-start text-left">
           {books.map((book) => {
             const yearLabel = formatBookYear(tDate, {
               year: book.year,
@@ -55,23 +55,29 @@ export default function Library(
             });
 
             return (
-              <li key={book.id} className="inline-block mb-2">
-                <div className="max-w-45 mx-auto">
-                  <Link href={`/${locale}/library/${book.id}`} className="max-w-45 p-0">
+              <li key={book.id} className="mb-2">
+                <Link
+                  href={`/${locale}/library/${book.id}`}
+                  className="flex flex-col h-full items-center" // center card contents
+                >
+                  {/* Fixed-width, fixed-height image slot */}
+                  <div className="w-[180px] h-[270px] flex items-start justify-center">
                     <Image
                       src={book.image}
                       alt={book.title}
                       width={180}
                       height={270}
-                      className="mx-auto"
+                      className="w-[180px] h-auto max-h-[270px]"
                     />
-                    <div className="max-w-45 mx-auto">
-                      <h2 className="text-xl">{book.title}</h2>
-                      <p>{book.author}</p>
-                      {yearLabel && <p>{yearLabel}</p>}
-                    </div>
-                  </Link>
-                </div>
+                  </div>
+
+                  {/* Text always starts after the same slot height */}
+                  <div className="mt-2 w-[180px] text-left">
+                    <h2 className="text-xl">{book.title}</h2>
+                    <p>{book.author}</p>
+                    {yearLabel && <p>{yearLabel}</p>}
+                  </div>
+                </Link>
               </li>
             );
           })}
