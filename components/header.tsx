@@ -13,7 +13,7 @@ export default function Header() {
 
 
     return (
-        <header className="w-screen border-b border-black/10 dark:border-gold py-6 px-5 md:px-10">
+        <header className="w-screen border-b border-gold py-6 px-5 md:px-10">
           <nav className=" flex flex-col items-center w-full md:flex-row md:items-center">
 
   {/* Left spacer (desktop) */}
@@ -92,34 +92,10 @@ export default function Header() {
             
 {/* The actual links */}
 
-              <Link
-                href="/"
-                className="text-textblue dark:text-gray-300 font-bold hover:scale-110"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("home")}
-              </Link>
-              <Link
-                href="/about"
-                className="text-textblue dark:text-gray-300 font-bold hover:scale-110"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("about")}
-              </Link>
-              <Link
-                href="/blog"
-                className="text-textblue dark:text-gray-300 font-bold hover:scale-110"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("blog")}
-              </Link>
-              <Link
-                href="/library"
-                className="text-textblue dark:text-gray-300 font-bold hover:scale-110"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("library")}
-              </Link>
+              <Link href="/" className="navLinks" onClick={() => setIsOpen(false)}>{t("home")}</Link>
+              <Link href="/about" className="navLinks" onClick={() => setIsOpen(false)}>{t("about")}</Link>
+              <Link href="/blog" className="navLinks" onClick={() => setIsOpen(false)}>{t("blog")}</Link>
+              <Link href="/library" className="navLinks" onClick={() => setIsOpen(false)}>{t("library")}</Link>
             </div>
           </nav>
         </header>
